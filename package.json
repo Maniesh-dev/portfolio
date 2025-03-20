@@ -9,16 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.0.4",
+    "@studio-freight/react-lenis": "^0.0.47",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
+    "lenis": "^1.2.3",
+    "lucide-react": "^0.477.0",
+    "motion": "^12.4.10",
+    "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.1"
+    "split-type": "^0.2.1",
+    "tailwind-merge": "^3.0.2",
+    "tailwind-scrollbar": "^4.0.1",
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.174.0",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "@types/three": "^0.174.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
