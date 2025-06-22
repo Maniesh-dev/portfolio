@@ -1,10 +1,15 @@
 import BigImageSec from '@/components/BigImageSec'
+import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import ImageGallery from '@/components/ImageGallery'
 import Menubar from '@/components/Menubar'
 import PixelatedImage from '@/components/PixelatedImage'
-import React from 'react'
+import ScaleAnimationImg from '@/components/ScaleAnimationImg'
+import WorkIntro from '@/components/WorkIntro'
+import WorkIntro2 from '@/components/WorkIntro2'
+
+
 
 const page = () => {
   return (
@@ -13,7 +18,11 @@ const page = () => {
       <Menubar/>
       <Hero />
       <PixelatedImage/>
+      <WorkIntro/>
       <ImageGallery/>
+      <WorkIntro2/>
+      <ScaleAnimationImg/>
+      <Contact/>
     </main>
   )
 }

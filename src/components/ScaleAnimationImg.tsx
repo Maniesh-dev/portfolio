@@ -1,18 +1,18 @@
 "use client"
 
-import image01 from '../../../public/img1.png'
-import image02 from '../../../public/img2.png'
-import image03 from '../../../public/img3.png'
-import image04 from '../../../public/img4.png'
-import image05 from '../../../public/img5.png'
-import image06 from '../../../public/img6.png'
-import image07 from '../../../public/img7.png'
-import image08 from '../../../public/img8.png'
-import image09 from '../../../public/img9.png'
-import image10 from '../../../public/img10.png'
-import image11 from '../../../public/img11.png'
-import image12 from '../../../public/img12.png'
-import image13 from '../../../public/img13.png'
+import image01 from '../../public/img1.png'
+import image02 from '../../public/img2.png'
+import image03 from '../../public/img3.png'
+import image04 from '../../public/img4.png'
+import image05 from '../../public/img5.png'
+import image06 from '../../public/img6.png'
+import image07 from '../../public/img7.png'
+import image08 from '../../public/img8.png'
+import image09 from '../../public/img9.png'
+import image10 from '../../public/img10.png'
+import image11 from '../../public/img11.png'
+import image12 from '../../public/img12.png'
+
 
 
 import Image from 'next/image'
@@ -142,75 +142,67 @@ const ScaleAnimationImg = () => {
 
   return (
     <main className='overflow-hidden'>
-      <section className='min-h-screen flex flex-col gap-10 overflow-hidden items-center justify-center'>
-        <h1>Design and Captivates</h1>
-        <p>{`${"( Explore Below )"}`}</p>
-      </section>
       <section className='w-[100vw] relative overflow-hidden'>
-        <div className="row">
-          <div className="col"><div className="img" data-origin="right"><Image src={image01} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image02} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image10} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image05} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image03} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image04} alt='image'/></div></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image01} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image04} alt='image'/></div></div>
         </div>
-        <div className="row">
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image05} alt='image'/></div></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image06} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image06} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"><div className="img" data-origin="left"><Image src={image07} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image08} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image07} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image09} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image01} alt='image'/></div></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image09} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image01} alt='image'/></div></div>
         </div>
-        <div className="row">
-          <div className="col"><div className="img" data-origin="right"><Image src={image10} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image03} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image03} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image11} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image12} alt='image'/></div></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image11} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"><div className="img" data-origin="left"><Image src={image05} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image08} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image05} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image08} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
         </div>
-        <div className="row">
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="right"><Image src={image12} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image01} alt='image'/></div></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image12} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="left"><Image className='rounded-md sm:rounded-none' src={image01} alt='image'/></div></div>
         </div>
-        <div className="row">
-          <div className="col"><div className="img" data-origin="right"><Image src={image06} alt='image'/></div></div>
-          <div className="col"></div>
-          <div className="col"><div className="img" data-origin="left"><Image src={image09} alt='image'/></div></div>
-          <div className="col"></div>
+        <div className="row gap-[10px] sm:gap-0 mb-[10px] sm:mb-0">
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image06} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
+          <div className="col"><div className="img" data-origin="right"><Image className='rounded-md sm:rounded-none' src={image09} alt='image'/></div></div>
+          <div className="col hidden sm:block"></div>
         </div>
-      </section>
-      <section className='min-h-screen flex flex-col gap-10 overflow-hidden items-center justify-center'>
-        <h1>Design and Captivates</h1>
-        <p>{`${"( Explore Below )"}`}</p>
       </section>
     </main>
   )

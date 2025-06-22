@@ -81,7 +81,7 @@ const Hero = () => {
           <div className="w-3 h-3 rounded-full bg-green-500">
             <div className="w-3 h-3 rounded-full bg-green-500 animate-ping"></div>
           </div>
-          <p className="primaryFont">
+          <p className="primaryFont text-[#b7ab98]">
             Spots Available For {getSpots().month} {getSpots().year}
           </p>
         </div>
@@ -98,7 +98,6 @@ const Hero = () => {
             Designing and Developing visually stunning and technically <br />
             proficient websites for clients around.
           </p>
-
           <ContactBtn text="Book a Call" className="px-4 py-1 font-semibold cursor-pointer"/>
         </div>
       </div>
