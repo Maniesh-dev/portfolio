@@ -1,3 +1,4 @@
+import About from '@/components/About'
 import BigImageSec from '@/components/BigImageSec'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
@@ -22,6 +23,7 @@ const page = () => {
       <ImageGallery/>
       <WorkIntro2/>
       <ScaleAnimationImg/>
+      <About/>
       <Contact/>
     </main>
   )
