@@ -1,6 +1,7 @@
 import About from '@/components/About'
 import BigImageSec from '@/components/BigImageSec'
 import Contact from '@/components/Contact'
+import Expertise from '@/components/Experties'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import ImageGallery from '@/components/ImageGallery'
@@ -12,21 +13,22 @@ import WorkIntro2 from '@/components/WorkIntro2'
 
 
 
-const page = () => {
+const Page = () => {
   return (
     <main>
-      <Header/>
-      <Menubar/>
+      <Header />
+      <Menubar />
       <Hero />
-      <PixelatedImage/>
-      <WorkIntro/>
-      <ImageGallery/>
-      <WorkIntro2/>
-      <ScaleAnimationImg/>
-      <About/>
-      <Contact/>
+      <PixelatedImage />
+      <WorkIntro />
+      <ImageGallery />
+      <WorkIntro2 />
+      <ScaleAnimationImg />
+      <About />
+      <Expertise />
+      <Contact />
     </main>
   )
 }
 
-export default page
+export default Page

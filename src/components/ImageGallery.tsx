@@ -15,18 +15,18 @@ import image12 from '../../public/image12.png'
 
 
 import Image, { StaticImageData } from 'next/image'
-import {useScroll, useTransform, motion, MotionValue} from 'framer-motion'
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { useDimension } from '@/lib/useDimension'
 import Lenis from '@studio-freight/lenis'
 
-const images= [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12]
+const images = [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12]
 
 const ImageGallery = () => {
   const container = useRef<HTMLDivElement>(null);
   const lenisRef = useRef<Lenis | undefined>(undefined);
   const rafHandleRef = useRef<number | null>(null);
-  const {height} = useDimension();
+  const { height } = useDimension();
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -36,8 +36,8 @@ const ImageGallery = () => {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
-  
-  
+
+
   useEffect(() => {
     if (!lenisRef.current) {
       lenisRef.current = new Lenis();
@@ -57,30 +57,30 @@ const ImageGallery = () => {
         rafHandleRef.current = null;
       }
     };
-    
+
   }, []);
 
   return (
     <div>
-      <div ref={container} className='h-[175vh] bg-[#070707] flex flex-row gap-[2vh] boxing-border p-[2vh] overflow-hidden'>
-        <Column images={[images[0], images[1], images[2]]} y={y1}/>
-        <Column images={[images[3], images[4], images[5]]} y={y2}/>
-        <Column images={[images[6], images[7], images[8]]} y={y3}/>
-        <Column images={[images[9], images[10], images[11]]} y={y4}/>
+      <div ref={container} className='h-[175vh] bg-[#070707] flex flex-row gap-[2vh] box-border p-[2vh] overflow-hidden'>
+        <Column images={[images[0], images[1], images[2]]} y={y1} />
+        <Column images={[images[3], images[4], images[5]]} y={y2} />
+        <Column images={[images[6], images[7], images[8]]} y={y3} />
+        <Column images={[images[9], images[10], images[11]]} y={y4} />
       </div>
     </div>
   )
 }
 
-const Column = ({images, y}: {images: StaticImageData[], y?: MotionValue}) => {
+const Column = ({ images, y }: { images: StaticImageData[], y?: MotionValue }) => {
   return (
-      <motion.div style={{y}} className='w-[25%] min-w-[250px] h-full flex flex-col gap-[2vh] relative column'>
-        {images.map((image: StaticImageData, index: number) => (
-          <div key={index} className='w-full h-full relative rounded-md overflow-hidden'>
-            <Image src={image} alt='image' className='object-cover'/>
-          </div>
-        ))}
-      </motion.div>
+    <motion.div style={{ y }} className='w-[25%] min-w-[250px] h-full flex flex-col gap-[2vh] relative column'>
+      {images.map((image: StaticImageData, index: number) => (
+        <div key={index} className='w-full h-full relative rounded-md overflow-hidden'>
+          <Image src={image} alt='image' className='object-cover' />
+        </div>
+      ))}
+    </motion.div>
   )
 }
 

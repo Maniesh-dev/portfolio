@@ -1,5 +1,4 @@
-import heroImg from "../../public/heroImage.png";
-import Image from "next/image";
+
 
 const BigImageSec = () => {
   return (

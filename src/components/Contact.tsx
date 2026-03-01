@@ -6,18 +6,21 @@ import logo from "../../public/logoWhite.png"
 import Image from 'next/image'
 import localFont from 'next/font/local';
 import SwapText from '@/components/ui/SwapText';
-import { motion } from 'framer-motion';
+
 
 const xirod = localFont({ src: "../fonts/Xirod.otf" });
 const Contact = () => {
   return (
-    <section className='max-h-screen w-full md:pt-[50px] md:px-10 flex flex-col justify-between pb-3 gap-20 md:gap-44 lg:gap-20'>
+    <section className='max-h-screen w-full md:pt-[50px] md:px-10 flex flex-col justify-between pb-3 gap-20 md:gap-44 lg:gap-14'>
 
       <div className='flex justify-between px-4 pt-12'>
-        <div 
+        <p className='text-center md:text-left'>
+          Just one small action stands between us and getting acquainted. <br />A great journey begins with the first word <span className='text-[#EB5B00]'>"Hello!"</span>
+        </p>
+        {/* <div 
           className='text-4xl md:text-5xl flex flex-col md:flex-row md:gap-4 text-nowrap'>
           “The End for the <span className='text-[#EB5B00] font-semibold'>New Beginning”</span>
-        </div>
+        </div> */}
         <div className='hidden lg:flex gap-10'>
           <div className='flex gap-2 group/insta'>
             <SwapText
@@ -48,13 +51,13 @@ const Contact = () => {
         </div>
         <div className='w-full flex flex-col gap-3 lg:pl-10'>
           <div 
-            className='flex items-end justify-between px-5 pb-4 gap-5'>
-            <div>Hello</div>
-            <div className='md:text-4xl'>manieshsanwal.dev@gmail.com</div>
+            className='flex items-end justify-between px-5 pb-4 '>
+            <p>Hello</p>
+            <input type="text" name="" id="" placeholder='Your Email' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right ml-5'/>
           </div>
-          <div className='flex items-end justify-between px-5 border-b pb-4'>
-            <div>Call</div>
-            <div className='text-4xl'>+91 123456789</div>
+          <div className='flex items-end justify-between px-5 pb-4 gap-5'>
+            <p>Call</p>
+            <input type="text" name="" id="" placeholder='Your Contact Number' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right'/>
           </div>
           <div className='flex items-center justify-between px-5 border-b pb-4 gap-10'>
             <input type="text" placeholder='Leave a message...' className='w-full bg-transparent  py-1 outline-none focus:border-b'/>

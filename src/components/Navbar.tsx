@@ -14,7 +14,7 @@ const NavLinks = [
 const SocialLinks = [
   {title: "Github", url: "#"},
   {title: "LinkedIn", url: "#"},
-  {title: "Instagram", url: "#"},
+  {title: "Dribbble", url: "#"},
   {title: "Whatsapp", url: "#"},
 ]
 

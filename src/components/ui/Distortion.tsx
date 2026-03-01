@@ -168,8 +168,9 @@ const GridDistortion = ({
     window.addEventListener("resize", handleResize);
     handleResize();
 
+    let animationFrameId: number;
     const animate = () => {
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
       uniforms.time.value += 0.05;
 
       const data: any = dataTexture.image.data;
@@ -200,6 +201,7 @@ const GridDistortion = ({
     };
     animate();
     return () => {
+      cancelAnimationFrame(animationFrameId);
       container.removeEventListener("mousemove", handleMouseMove);
       container.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("resize", handleResize);
@@ -208,11 +210,10 @@ const GridDistortion = ({
       material.dispose();
       dataTexture.dispose();
       if (uniforms.uTexture.value) uniforms.uTexture.value.dispose();
-      
     };
   }, [grid, mouse, strength, relaxation, imageSrc]);
 
-  
+
 
   return (
     <div ref={containerRef} className={`w-full h-full overflow-hidden ${className}`} />

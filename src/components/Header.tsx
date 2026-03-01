@@ -4,7 +4,6 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { HoverBorderGradient } from './ui/HoverBorderGradient';
-import { PhoneCall } from 'lucide-react';
 import localFont from 'next/font/local';
 import Logo from '../../public/logoWhite.png'
 
@@ -16,29 +15,29 @@ const Header = () => {
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-      
+
       if (scrollYProgress.get() === 0) {
         setIsOpen(false);
       } else {
         if (direction < 0) {
           setIsOpen(true);
         } else {
-          setIsOpen(true);
+          setIsOpen(false);
         }
       }
     }
   });
 
-  const variants = {}
+
 
   return (
     <AnimatePresence mode="wait">
-      <motion.header 
+      <motion.header
         initial={{ marginInline: "var(--margin-from)", paddingInline: "var(--padding-from)" }}
         // animate={{ marginInline: isOpen ? "10%" : "0", paddingInline: isOpen ? "5%" : "0" }}
-        animate={{ 
-          marginInline: isOpen ? "var(--margin-to)" : "0", 
-          paddingInline: isOpen ? "var(--padding-to)" : "0" 
+        animate={{
+          marginInline: isOpen ? "var(--margin-to)" : "0",
+          paddingInline: isOpen ? "var(--padding-to)" : "0"
         }}
         transition={{ duration: 0.5 }}
         className='fixed z-15 top-6 left-3 right-3 md:left-[125px] md:right-[125px]
@@ -47,14 +46,14 @@ const Header = () => {
         xl:[--margin-from:10%] xl:[--margin-to:5%] 
         xl:[--padding-from:10%] xl:[--padding-to:5%]
         '>
-        <motion.div 
-          initial={{ 
+        <motion.div
+          initial={{
             borderRadius: '0',
             boxShadow: 'rgba(255, 255, 255, 0.2) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.16) 0px 0px 0px 0px',
             backdropFilter: "blur(0px)",
             borderTop: 0
           }}
-          animate={{ 
+          animate={{
             borderRadius: isOpen ? "1000px" : "0",
             boxShadow: isOpen ? 'rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.16) 0px 2px 8px 0px' : 'rgba(255, 255, 255, 0.2) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.16) 0px 0px 0px 0px',
             backdropFilter: isOpen ? "blur(6px)" : "blur(0px)",
@@ -79,7 +78,7 @@ const Header = () => {
               containerClassName="rounded-full"
               as="button"
               className="bg-black text-white flex items-center space-x-2 cursor-pointer"
-            > 
+            >
               <span className='text-sm'>Download CV</span>
             </HoverBorderGradient>
           </div>
@@ -90,10 +89,10 @@ const Header = () => {
 }
 
 const navItems = [
-  {name: "Index", link: "/"},
-  {name: "Projects", link: "/projects"},
-  {name: "About", link: "/about"},
-  {name: "Contact", link: "/contact"},
+  { name: "Index", link: "/" },
+  { name: "Projects", link: "/projects" },
+  { name: "About", link: "/about" },
+  { name: "Contact", link: "/contact" },
 ]
 
 export default Header
