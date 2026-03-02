@@ -7,7 +7,7 @@ import TextAnimation from "./ui/TextAnimation";
 
 const PixelatedImage = () => {
   return (
-    <div className="min-h-[120dvh] xl:grid grid-cols-12 gap-4 pt-20 xl:pt-32 bg-black px-4 xl:px-0">
+    <div className="min-h-[120dvh] xl:grid grid-cols-12 gap-4 pt-20 xl:pt-32 bg-black sm:px-4 px-2 xl:px-0">
       <div className="w-full h-[80vh] xl:h-full col-span-12 xl:col-span-5">
         <GridDistortion
           imageSrc={heroImg.src}

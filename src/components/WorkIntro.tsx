@@ -16,7 +16,7 @@ const WorkIntro = () => {
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1.5, 0]);
   return (
-    <div className="md:min-h-screen w-full bg-black flex flex-col justify-center items-center relative">
+    <div className="md:min-h-screen w-full pt-14 sm:pt-0 bg-black flex flex-col justify-center items-center relative">
       <div className='w-full flex flex-col md:flex-row justify-between items-center px-8 text-sm'>
         <p>House of digital aesthetics ©</p>
         <p>Place where well-crafted web projects are born.</p>
