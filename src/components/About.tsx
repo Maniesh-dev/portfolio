@@ -92,10 +92,11 @@ const About = () => {
       <div className="mb-16 text-center px-4">
         <div className="text-xl md:text-2xl font-medium">
           I pair strong visual design and development skills with a focus on{" "}
-          <p className="flex justify-center items-center mt-4">
+          <p className="flex-col md:flex-row justify-center items-center mt-4">
             <span className="text-[#EB5B00] font-bold sm:text-4xl">User-centered Design</span>{" "}
             <span className="text-4xl md:text-6xl mx-2 font-bold">&</span>{" "}
-            <span className="text-[#EB5B00] font-bold sm:text-4xl">Business-driven Development.</span>
+            <span className="block md:hidden text-[#EB5B00] font-bold sm:text-4xl">Business-driven Development.</span>
+            <span className="hidden md:block text-[#EB5B00] font-bold sm:text-4xl">Business-driven Development.</span>
           </p>
         </div>
       </div>
