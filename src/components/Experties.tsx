@@ -36,6 +36,10 @@ const Expertise = () => {
         <p>I work with startups, growing agencies, and enterprises, adapting my tools to each task.</p>
       </div>
 
+      <div className={`${xirod.className} text-center mt-20 text-[#b7ab98]`}>
+        <p className="text-4xl md:text-7xl">HORMONY IN MAKING</p>
+      </div>
+
     </section>
   )
 }

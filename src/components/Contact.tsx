@@ -11,11 +11,11 @@ import SwapText from '@/components/ui/SwapText';
 const xirod = localFont({ src: "../fonts/Xirod.otf" });
 const Contact = () => {
   return (
-    <section className='max-h-screen w-full md:pt-[50px] md:px-10 flex flex-col justify-between pb-3 gap-20 md:gap-44 lg:gap-14'>
+    <section className='max-h-screen w-full md:pt-[50px] md:px-10 flex flex-col justify-between pb-3 gap-20 md:gap-44 lg:gap-10'>
 
       <div className='flex justify-between px-4 pt-12'>
         <p className='text-center md:text-left'>
-          Just one small action stands between us and getting acquainted. <br />A great journey begins with the first word <span className='text-[#EB5B00]'>"Hello!"</span>
+          Just one small action stands between us and getting acquainted. <br />A great journey begins with <span className='text-[#EB5B00]'>"Hello!"</span>
         </p>
         {/* <div 
           className='text-4xl md:text-5xl flex flex-col md:flex-row md:gap-4 text-nowrap'>

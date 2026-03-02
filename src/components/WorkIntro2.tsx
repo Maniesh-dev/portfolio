@@ -4,7 +4,7 @@ const WorkIntro2 = () => {
   return (
     <section className='md:min-h-screen w-full p-10 flex flex-col justify-center items-center gap-10'>
       <div className='text-4xl sm:text-6xl md:text-7xl font-bold capitalize text-center text-[#b7ab98]'>
-        <p>Together with you, we create new stories. Modern, technological, successful projects.</p>
+        <p>Together with you, we create new stories. Modern, proficient, successful projects.</p>
       </div>
       <div >
         <p className='text-sm text-[#EB5B00]'>I deliver I'm responsible for:</p>

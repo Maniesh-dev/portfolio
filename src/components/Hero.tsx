@@ -95,8 +95,8 @@ const Hero = () => {
             </div>
           </div>
           <p className="text-center primaryFont capitalize text-xl text-[#b7ab98]">
-            Designing and Developing visually stunning and technically <br />
-            proficient websites for clients.
+            Engaging user experience, world class web design & development, <br />
+            unique brand identity solutions to shine.
           </p>
           <ContactBtn text="Book a Call" className="px-4 py-1 font-semibold cursor-pointer" />
         </div>
