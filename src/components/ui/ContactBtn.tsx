@@ -109,7 +109,7 @@ const options: ISourceOptions = {
   ],
 };
 
-export default function ContactBtn({text, className}: {text: string, className?: string}) {
+export default function ContactBtn({ text, className }: { text: string, className?: string }) {
   const [particleState, setParticlesReady] = useState<"loaded" | "ready">();
   const [isHovering, setIsHovering] = useState(false);
 

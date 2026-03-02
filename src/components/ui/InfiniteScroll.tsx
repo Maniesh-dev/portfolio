@@ -1,7 +1,7 @@
 import { PlusIcon } from 'lucide-react'
 import React, { Fragment } from 'react'
 
-const words = [ "Creative", "Designer", "Creator", "Founder", "Inventor"]
+const words = ["Creative", "Designer", "Creator", "Founder", "Inventor"]
 interface props {
   bgStyle: string
   textStyle: string
@@ -9,7 +9,7 @@ interface props {
   rowAnimation: string
 }
 
-const InfiniteScroll = ({bgStyle, textStyle, rowAnimation, iconStyle}: props) => {
+const InfiniteScroll = ({ bgStyle, textStyle, rowAnimation, iconStyle }: props) => {
   return (
     <div>
       <div className={`${bgStyle}  overflow-x-clip`}>
@@ -20,7 +20,7 @@ const InfiniteScroll = ({bgStyle, textStyle, rowAnimation, iconStyle}: props) =>
                 {words.map(word => (
                   <div key={word} className='flex items-center gap-4 primaryFont py-[0px]'>
                     <span className={`${textStyle}`}>{word}</span>
-                    <PlusIcon className={`${iconStyle} w-4 h-4`}/>
+                    <PlusIcon className={`${iconStyle} w-4 h-4`} />
                   </div>
                 ))}
               </Fragment>

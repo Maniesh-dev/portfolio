@@ -22,7 +22,7 @@ const Header = () => {
         if (direction < 0) {
           setIsOpen(true);
         } else {
-          setIsOpen(false);
+          setIsOpen(true);
         }
       }
     }

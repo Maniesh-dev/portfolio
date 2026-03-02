@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp, ArrowUpRight} from 'lucide-react'
+import { ArrowUp, ArrowUpRight } from 'lucide-react'
 import React from 'react'
 import logo from "../../public/logoWhite.png"
 import Image from 'next/image'
@@ -29,38 +29,38 @@ const Contact = () => {
               className='cursor-pointer h-[25px] '
               supportsHover
             />
-            <ArrowUpRight size={20} className='group-hover/insta:rotate-45 transition-all duration-500'/>
+            <ArrowUpRight size={20} className='group-hover/insta:rotate-45 transition-all duration-500' />
           </div>
           <div className='flex gap-2 group/git'>
-          <SwapText
+            <SwapText
               finalText={`${"{ Github }"}`}
               initialText={`${"{ Github }"}`}
               className='cursor-pointer h-[25px] '
               supportsHover
             />
-            <ArrowUpRight size={20} className='group-hover/git:rotate-45 transition-all duration-500'/>
+            <ArrowUpRight size={20} className='group-hover/git:rotate-45 transition-all duration-500' />
           </div>
         </div>
       </div>
 
-      
+
 
       <div className='flex items-center'>
         <div className='hidden lg:block'>
-          <Image src={logo} alt="" className='object-cover'/>
+          <Image src={logo} alt="" className='object-cover' />
         </div>
         <div className='w-full flex flex-col gap-3 lg:pl-10'>
-          <div 
+          <div
             className='flex items-end justify-between px-5 pb-4 '>
             <p>Hello</p>
-            <input type="text" name="" id="" placeholder='Your Email' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right ml-5'/>
+            <input type="text" name="" id="" placeholder='Your Email' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right ml-5' />
           </div>
           <div className='flex items-end justify-between px-5 pb-4 gap-5'>
             <p>Call</p>
-            <input type="text" name="" id="" placeholder='Your Contact Number' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right'/>
+            <input type="text" name="" id="" placeholder='Your Contact Number' className='w-full bg-transparent py-1 outline-none border-b placeholder:text-right' />
           </div>
           <div className='flex items-center justify-between px-5 border-b pb-4 gap-10'>
-            <input type="text" placeholder='Leave a message...' className='w-full bg-transparent  py-1 outline-none focus:border-b'/>
+            <input type="text" placeholder='Leave a message...' className='w-full bg-transparent  py-1 outline-none focus:border-b' />
             <button className='bg-white text-black px-5 py-1 rounded-full'>Send</button>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Contact = () => {
               className='cursor-pointer h-[25px] '
               supportsHover
             />
-            <ArrowUp size={20}/>
+            <ArrowUp size={20} />
           </button>
           <div className='flex justify-between items-end'>
             <div className='text-[#EB5B00] text-sm'>&copy; Design & Build by <br /> Maniesh Sanwal </div>

@@ -35,7 +35,7 @@ const Expertise = () => {
         <p>From sleek Design to seamless functionality, I turn ideas into digital experiences tailored for your product, audience, and goals.</p>
         <p>I work with startups, growing agencies, and enterprises, adapting my tools to each task.</p>
       </div>
-    
+
     </section>
   )
 }

@@ -15,11 +15,12 @@
 
 @theme {
   --animate-moveLeft: moveLeft 20s linear infinite;
+
   @keyframes moveLeft {
     from {
       transform: translateX(0);
     }
-  
+
     to {
       transform: translateX(-50%);
     }
@@ -28,11 +29,12 @@
 
 @theme {
   --animate-moveRight: moveRight 20s linear infinite;
+
   @keyframes moveRight {
     from {
       transform: translateX(-50%);
     }
-  
+
     to {
       transform: translateX(0%);
     }
@@ -41,11 +43,12 @@
 
 @theme {
   --animate-clockWiseRotate: clockWiseRotate 4s linear infinite;
+
   @keyframes clockWiseRotate {
     from {
       transform: rotate(0deg);
     }
-  
+
     to {
       transform: rotate(360deg);
     }
@@ -56,11 +59,12 @@
 
 @theme {
   --animate-antiClockWiseRotate: antiClockWiseRotate 4s linear infinite;
+
   @keyframes antiClockWiseRotate {
     from {
       transform: rotate(0deg);
     }
-    
+
     to {
       transform: rotate(-360deg);
     }
@@ -108,23 +112,34 @@ body {
   }
 
   .ideaBtn {
-    background: rgb(0,0,0);
-    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(235,91,0,1) 83%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(235, 91, 0, 1) 83%);
   }
 
   .ideaBtnBorder {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(235,91,0,1) 83%, rgba(255,255,255,1) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(235, 91, 0, 1) 83%, rgba(255, 255, 255, 1) 100%);
   }
-  
+
 }
 
 @layer utilities {
-  .column{
-    &:nth-of-type(1){top: -45%}
-    &:nth-of-type(2){top: -90%}
-    &:nth-of-type(3){top: -45%}
-    &:nth-of-type(4){top: -85%}
+  .column {
+    &:nth-of-type(1) {
+      top: -45%
+    }
+
+    &:nth-of-type(2) {
+      top: -90%
+    }
+
+    &:nth-of-type(3) {
+      top: -45%
+    }
+
+    &:nth-of-type(4) {
+      top: -85%
+    }
   }
 
   .row {
@@ -154,5 +169,3 @@ body {
     transform-origin: 100% 0%;
   }
 }
-
-

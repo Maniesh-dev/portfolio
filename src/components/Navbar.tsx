@@ -1,21 +1,21 @@
 import Link from 'next/link'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import localFont from 'next/font/local';
 
 const Xirod = localFont({ src: "../fonts/Xirod.otf" });
 const NavLinks = [
-  {title: "Index", url: "/"},
-  {title: "Work", url: "/work"},
-  {title: "About", url: "/about"},
-  {title: "Expertise", url: "/expertise"},
-  {title: "Contact", url: "/contact"},
+  { title: "Index", url: "/" },
+  { title: "Work", url: "/work" },
+  { title: "About", url: "/about" },
+  { title: "Expertise", url: "/expertise" },
+  { title: "Contact", url: "/contact" },
 ]
 
 const SocialLinks = [
-  {title: "Github", url: "#"},
-  {title: "LinkedIn", url: "#"},
-  {title: "Dribbble", url: "#"},
-  {title: "Whatsapp", url: "#"},
+  { title: "Github", url: "#" },
+  { title: "LinkedIn", url: "#" },
+  { title: "Dribbble", url: "#" },
+  { title: "Whatsapp", url: "#" },
 ]
 
 const perspective = {
@@ -32,14 +32,14 @@ const perspective = {
     translateY: 0,
     transition: {
       duration: 0.65,
-      opacity: {duration: 0.35},
+      opacity: { duration: 0.35 },
       delay: 0.5 + (i * 0.1),
       ease: [0.215, 0.61, 0.355, 1]
     }
   }),
   exit: {
     opacity: 0,
-    transition: {duration: 0.35, ease: [0.76, 0, 0.24, 1]}
+    transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] }
   }
 }
 
@@ -59,7 +59,7 @@ const slideIn = {
   }),
   exit: {
     opacity: 0,
-    transition: {duration: 0.35, ease: [0.76, 0, 0.24, 1]}
+    transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] }
   }
 }
 const Navbar = () => {
@@ -68,14 +68,14 @@ const Navbar = () => {
       <nav className='flex flex-col'>
         {NavLinks.map((link, i) => (
           <div key={i} className='perspective-[1000px] perspective-origin-bottom relative isolate group/link '>
-            <motion.div 
+            <motion.div
               custom={i}
               variants={perspective}
               initial='initial'
               animate='enter'
               exit='exit'
               className='py-4 flex items-center'
-            > 
+            >
               <div className='absolute border-0 left-0 w-full h-0 bg-black z-[-1] group-hover/link:h-full transform-origin:bottom transition-all duration-500'></div>
               <Link href={link.url} className={`${Xirod.className} text-black group-hover/link:text-[#EB5B00] text-4xl font-extrabold uppercase px-10`}>
                 {link.title}
@@ -87,7 +87,7 @@ const Navbar = () => {
 
       <div>
         {SocialLinks.map((link, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             custom={i}
             variants={slideIn}
@@ -99,7 +99,7 @@ const Navbar = () => {
             <div className='flex w-full items-center justify-center gap-3 '>
               <div className='h-[1px] w-[10%] flex flex-1 bg-black rounded-4xl'></div>
               <Link href={link.url} className='text-black text-center tracking-[5px] mb-3 font-semibold pr-10'>
-              {link.title}
+                {link.title}
               </Link>
             </div>
           </motion.div>

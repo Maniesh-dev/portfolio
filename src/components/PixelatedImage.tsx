@@ -54,9 +54,9 @@ const PixelatedImage = () => {
           </div>
         </div>
 
-        <CreativeDeveloper/>
+        <CreativeDeveloper />
 
-        <TextAnimation/>
+        <TextAnimation />
       </div>
     </div>
   );

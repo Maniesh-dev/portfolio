@@ -98,7 +98,7 @@ const Hero = () => {
             Designing and Developing visually stunning and technically <br />
             proficient websites for clients.
           </p>
-          <ContactBtn text="Book a Call" className="px-4 py-1 font-semibold cursor-pointer"/>
+          <ContactBtn text="Book a Call" className="px-4 py-1 font-semibold cursor-pointer" />
         </div>
       </div>
     </div>

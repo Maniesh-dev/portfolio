@@ -11,7 +11,7 @@ const About = () => {
         <p>Inside every person is a whole world. This is the greatest gift. And only some are generous enough to share theirs with me.</p>
         <p>All the best around is the manifestation of these people.</p>
       </div>
-    
+
     </section>
   )
 }
