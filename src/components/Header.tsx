@@ -74,13 +74,15 @@ const Header = () => {
           </div>
           {/* <div className='block xl:hidden'></div> */}
           <div className='hidden md:flex items-center justify-center xl:justify-end'>
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              className="bg-black text-white flex items-center space-x-2 cursor-pointer"
-            >
-              <span className='text-sm'>Download CV</span>
-            </HoverBorderGradient>
+            <Link href="/contact" className="w-full">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-black text-white flex items-center justify-center w-full space-x-2 cursor-pointer"
+              >
+                <span className='text-sm'>Let's Connect</span>
+              </HoverBorderGradient>
+            </Link>
           </div>
         </motion.div>
       </motion.header>

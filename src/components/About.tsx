@@ -6,12 +6,66 @@ import { motion } from "framer-motion";
 const xirod = localFont({ src: "../fonts/Xirod.otf" });
 
 const skills = [
-  { title: "UI / UX Design", id: "01" },
-  { title: "Web Design", id: "02" },
-  { title: "Web Development", id: "03" },
-  { title: "AI SaaS App", id: "04" },
-  { title: "AI Agents", id: "05" },
-  { title: "AI Automation", id: "06" },
+  {
+    title: "UI / UX Design",
+    id: "01",
+    points: [
+      "User research & wireframes",
+      "Interactive prototyping",
+      "Visual design systems",
+      "Usability testing",
+    ],
+  },
+  {
+    title: "Web Design",
+    id: "02",
+    points: [
+      "Responsive layouts",
+      "Typography & color theory",
+      "Brand-aligned aesthetics",
+      "Motion & micro-interactions",
+    ],
+  },
+  {
+    title: "Web Development",
+    id: "03",
+    points: [
+      "Next.js / React apps",
+      "Performance optimization",
+      "Clean & scalable code",
+      "API integrations",
+    ],
+  },
+  {
+    title: "AI SaaS App",
+    id: "04",
+    points: [
+      "AI-powered product design",
+      "Subscription & billing flows",
+      "Dashboard & analytics UI",
+      "Scalable cloud architecture",
+    ],
+  },
+  {
+    title: "AI Agents",
+    id: "05",
+    points: [
+      "Conversational AI flows",
+      "LLM integration (OpenAI, etc.)",
+      "Autonomous task automation",
+      "Custom agent pipelines",
+    ],
+  },
+  {
+    title: "AI Automation",
+    id: "06",
+    points: [
+      "Workflow automation",
+      "Data pipeline design",
+      "Third-party API orchestration",
+      "Intelligent scheduling & triggers",
+    ],
+  },
 ];
 
 const About = () => {
@@ -77,9 +131,22 @@ const About = () => {
                 className="group relative bg-[#070707] p-12 min-h-[300px] flex flex-col justify-between hover:bg-[#111111] transition-colors"
               >
                 <span className="text-sm font-mono opacity-40">{skill.id}</span>
-                <h3 className="text-3xl md:text-4xl font-bold group-hover:text-[#EB5B00] transition-colors">
-                  {skill.title}
-                </h3>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-[#EB5B00] transition-colors mb-4">
+                    {skill.title}
+                  </h3>
+                  <ul className="space-y-1.5">
+                    {skill.points.map((point, i) => (
+                      <li
+                        key={i}
+                        className="text-sm text-[#b7ab98]/50 group-hover:text-[#b7ab98]/80 transition-colors flex items-center gap-2"
+                      >
+                        <span className="w-1 h-1 rounded-full bg-[#EB5B00] opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 {/* Decorative square element from reference */}
                 <div className="absolute right-8 top-8 w-4 h-4 border border-white/20 group-hover:border-[#EB5B00] group-hover:rotate-45 transition-all duration-500" />
               </motion.div>

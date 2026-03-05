@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import localFont from 'next/font/local';
 
@@ -62,27 +65,44 @@ const slideIn = {
     transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] }
   }
 }
-const Navbar = () => {
+
+const Navbar = ({ onNavigate }: { onNavigate?: () => void }) => {
+  const pathname = usePathname()
+
   return (
     <div className='h-full pt-20 pb-10 box-border flex flex-col justify-between'>
       <nav className='flex flex-col'>
-        {NavLinks.map((link, i) => (
-          <div key={i} className='perspective-[1000px] perspective-origin-bottom relative isolate group/link '>
-            <motion.div
-              custom={i}
-              variants={perspective}
-              initial='initial'
-              animate='enter'
-              exit='exit'
-              className='py-4 flex items-center'
-            >
-              <div className='absolute border-0 left-0 w-full h-0 bg-black z-[-1] group-hover/link:h-full transform-origin:bottom transition-all duration-500'></div>
-              <Link href={link.url} className={`${Xirod.className} text-black group-hover/link:text-[#EB5B00] text-4xl font-extrabold uppercase px-10`}>
-                {link.title}
-              </Link>
-            </motion.div>
-          </div>
-        ))}
+        {NavLinks.map((link, i) => {
+          const isActive = pathname === link.url
+          return (
+            <div key={i} className='perspective-[1000px] perspective-origin-bottom relative isolate group/link '>
+              <motion.div
+                custom={i}
+                variants={perspective}
+                initial='initial'
+                animate='enter'
+                exit='exit'
+                className='py-4 flex items-center'
+              >
+                <div className={`absolute border-0 left-0 w-full bg-black z-[-1] transition-all duration-500 ${isActive ? 'h-full' : 'h-0 group-hover/link:h-full'
+                  }`}></div>
+                <Link
+                  href={link.url}
+                  onClick={onNavigate}
+                  className={`${Xirod.className} text-4xl font-extrabold uppercase px-10 transition-colors ${isActive
+                      ? 'text-[#EB5B00]'
+                      : 'text-black group-hover/link:text-[#EB5B00]'
+                    }`}
+                >
+                  {link.title}
+                </Link>
+                {isActive && (
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#EB5B00] ml-3 animate-pulse shadow-[0_0_8px_rgba(235,91,0,0.6)]" />
+                )}
+              </motion.div>
+            </div>
+          )
+        })}
       </nav>
 
       <div>

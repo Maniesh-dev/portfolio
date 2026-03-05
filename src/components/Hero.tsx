@@ -98,7 +98,7 @@ const Hero = () => {
             Engaging user experience, world class web design & development, <br />
             unique brand identity solutions to shine.
           </p>
-          <ContactBtn text="Book a Call" className="px-4 py-1 font-semibold cursor-pointer" />
+          <ContactBtn text="Book a Call" href="https://cal.com/manieshsanwal/30min" className="px-4 py-1 font-semibold cursor-pointer" />
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ const Menubar = () => {
           className='w-[400px] h-[650px] bg-[#EB5B00] rounded-2xl relative'
         >
           <AnimatePresence mode='wait'>
-            {isActive && <Navbar />}
+            {isActive && <Navbar onNavigate={() => setIsActive(false)} />}
           </AnimatePresence>
         </motion.nav>
       </AnimatePresence>

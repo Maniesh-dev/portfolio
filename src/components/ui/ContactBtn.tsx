@@ -109,7 +109,7 @@ const options: ISourceOptions = {
   ],
 };
 
-export default function ContactBtn({ text, className }: { text: string, className?: string }) {
+export default function ContactBtn({ text, className, href }: { text: string, className?: string, href?: string }) {
   const [particleState, setParticlesReady] = useState<"loaded" | "ready">();
   const [isHovering, setIsHovering] = useState(false);
 
@@ -126,14 +126,15 @@ export default function ContactBtn({ text, className }: { text: string, classNam
     return options;
   }, [isHovering]);
 
-  return (
-    <button
-      className={`group relative my-8 border rounded-full p-1 text-white transition-transform hover:scale-110 active:scale-105`}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
+  const commonProps = {
+    className: `group relative my-8 border rounded-full p-1 text-white transition-transform hover:scale-110 active:scale-105 inline-block`,
+    onMouseEnter: () => setIsHovering(true),
+    onMouseLeave: () => setIsHovering(false),
+  };
+
+  const content = (
+    <>
       <div className="relative flex items-center justify-center border gap-2 rounded-full ideaBtn px-2 py-1 text-white uppercase">
-        {/* <Sparkle className="size-6 -translate-y-0.5 animate-sparkle fill-white" /> */}
         <Sparkle
           style={{
             animationDelay: "1s",
@@ -154,7 +155,6 @@ export default function ContactBtn({ text, className }: { text: string, classNam
           }}
           className="absolute left-3 top-3 size-1.5 animate-sparkle fill-white"
         />
-
         <span className={`font-medium pl-5 ${className}`}>{text}</span>
       </div>
       {!!particleState && (
@@ -167,6 +167,20 @@ export default function ContactBtn({ text, className }: { text: string, classNam
           options={modifiedOptions}
         />
       )}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" {...commonProps}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button {...commonProps}>
+      {content}
     </button>
   );
 }
