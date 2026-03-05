@@ -2,7 +2,7 @@
 
 import About from '@/components/About'
 import Contact from '@/components/Contact'
-import Expertise from '@/components/Experties'
+import Expertise from '@/components/Expertise'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import ImageGallery from '@/components/ImageGallery'

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { NotificationEmail } from '@/emails/NotificationEmail';
+import * as React from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
             from: 'Portfolio Contact <onboarding@resend.dev>',
             to: ['manieshsanwal.dev@gmail.com'], // Using the registered Resend account email
             subject: `New Lead: ${name}`,
-            react: NotificationEmail({ name, email, phone, projectDetails }) as React.ReactElement,
+            react: React.createElement(NotificationEmail, { name, email, phone, projectDetails }),
         });
 
         if (notifyResult.error) {
