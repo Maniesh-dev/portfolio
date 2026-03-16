@@ -5,9 +5,13 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { HoverBorderGradient } from './ui/HoverBorderGradient';
 import localFont from 'next/font/local';
-import Logo from '../../public/logoWhite.png'
+import Image from 'next/image';
+import Logo from '../../public/logoWhite.png';
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+const xirod = localFont({ 
+  src: "../fonts/Xirod.otf",
+  display: 'swap'
+});
 const Header = () => {
   const { scrollYProgress } = useScroll();
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +50,7 @@ const Header = () => {
         xl:[--margin-from:10%] xl:[--margin-to:5%] 
         xl:[--padding-from:10%] xl:[--padding-to:5%]
         '>
-        <motion.div
+        <motion.nav
           initial={{
             borderRadius: '0',
             boxShadow: 'rgba(255, 255, 255, 0.2) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.16) 0px 0px 0px 0px',
@@ -62,8 +66,13 @@ const Header = () => {
           transition={{ duration: 0.5 }}
           className='flex items-center justify-between xl:grid grid-cols-[25%_50%_25%] backdrop-blur rounded-full px-4'>
           <div className='flex items-center justify-center'>
-            <Link href="/" className='flex items-center justify-center'>
-              <img src={Logo.src} alt="Logo" className='w-[120px]' />
+            <Link href="/" className='flex items-center justify-center' aria-label="Home page">
+              <Image 
+                src={Logo} 
+                alt="Maniesh Sanwal - Portfolio Web Developer Logo" 
+                className='w-[120px] h-auto' 
+                priority 
+              />
             </Link>
           </div>
           <div className='py-1 sm:px-0 hidden xl:flex items-center justify-center gap-4'>
@@ -74,7 +83,7 @@ const Header = () => {
           </div>
           {/* <div className='block xl:hidden'></div> */}
           <div className='hidden md:flex items-center justify-center xl:justify-end'>
-            <Link href="/contact" className="w-full flex justify-end">
+            <Link href="/contact" className="w-full flex justify-end" aria-label="Let's Connect - Contact Page">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
@@ -84,7 +93,7 @@ const Header = () => {
               </HoverBorderGradient>
             </Link>
           </div>
-        </motion.div>
+        </motion.nav>
       </motion.header>
     </AnimatePresence>
   )
