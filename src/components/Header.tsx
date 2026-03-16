@@ -74,7 +74,7 @@ const Header = () => {
           </div>
           {/* <div className='block xl:hidden'></div> */}
           <div className='hidden md:flex items-center justify-center xl:justify-end'>
-            <Link href="/contact" className="w-full">
+            <Link href="/contact" className="w-full flex justify-end">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"

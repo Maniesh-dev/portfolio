@@ -6,7 +6,10 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import SwapText from '@/components/ui/SwapText'
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+const xirod = localFont({
+  src: "../fonts/Xirod.otf",
+  display: 'swap',
+});
 
 const socialLinks = [
   { title: "Instagram", url: "#" },
@@ -181,11 +184,13 @@ const Contact = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
                 <div className="space-y-2">
-                  <label className="text-xs tracking-[3px] uppercase text-[#b7ab98]/40">Your Name</label>
+                  <label htmlFor="name" className="text-xs tracking-[3px] uppercase text-[#b7ab98]">Your Name</label>
                   <input
+                    id="name"
                     type="text"
                     name="name"
                     required
+                    aria-required="true"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your Name"
@@ -193,11 +198,13 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs tracking-[3px] uppercase text-[#b7ab98]/40">Your Email</label>
+                  <label htmlFor="email" className="text-xs tracking-[3px] uppercase text-[#b7ab98]">Your Email</label>
                   <input
+                    id="email"
                     type="email"
                     name="email"
                     required
+                    aria-required="true"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your Email"
@@ -207,11 +214,13 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2 relative z-10">
-                <label className="text-xs tracking-[3px] uppercase text-[#b7ab98]/40">WhatsApp Number</label>
+                <label htmlFor="phone" className="text-xs tracking-[3px] uppercase text-[#b7ab98]">WhatsApp Number</label>
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   required
+                  aria-required="true"
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Your WhatsApp Number"
@@ -220,11 +229,13 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2 relative z-10">
-                <label className="text-xs tracking-[3px] uppercase text-[#b7ab98]/40">Project Details</label>
+                <label htmlFor="projectDetails" className="text-xs tracking-[3px] uppercase text-[#b7ab98]">Project Details</label>
                 <textarea
+                  id="projectDetails"
                   rows={4}
                   name="projectDetails"
                   required
+                  aria-required="true"
                   value={formData.projectDetails}
                   onChange={handleChange}
                   placeholder="Tell me about your idea or project..."
@@ -276,6 +287,7 @@ const Contact = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               viewport={{ once: true }}
+              aria-label={`Follow on ${link.title}`}
               className="group flex items-center gap-2 cursor-pointer"
             >
               <SwapText

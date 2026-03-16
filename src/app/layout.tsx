@@ -5,16 +5,25 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Maniesh Sanwal | Portfolio",
-  description: "Maniesh Sanwal Portfolio",
+  title: "Maniesh Sanwal | Portfolio - UI/UX Designer & Full-Stack Developer",
+  description: "Maniesh Sanwal's professional portfolio showcasing UI/UX design, Web Development, and AI-powered SaaS solutions.",
+  keywords: ["Maniesh Sanwal", "Portfolio", "UI/UX Designer", "Full-Stack Developer", "AI SaaS", "Web Design"],
+  authors: [{ name: "Maniesh Sanwal" }],
+  openGraph: {
+    title: "Maniesh Sanwal | Portfolio",
+    description: "UI/UX Designer & Full-Stack Developer creating impactful digital experiences.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

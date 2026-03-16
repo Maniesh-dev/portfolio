@@ -1,7 +1,10 @@
 'use client'
 
 import localFont from "next/font/local";
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+const xirod = localFont({
+  src: "../fonts/Xirod.otf",
+  display: 'swap',
+});
 import forkIcon from '../../public/forkicon.png'
 import Image from "next/image";
 import { motion } from "motion/react";
