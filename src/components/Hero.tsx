@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
         ))}
       </div>
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <InfiniteScroll
         bgStyle="bg-[#EB5B00] to-sky-400 absolute top-[400px] rotate-[37deg] left-[100px]"

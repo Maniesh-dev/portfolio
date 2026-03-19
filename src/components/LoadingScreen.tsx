@@ -148,13 +148,13 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
                 {/* Subtle corner accents */}
                 <motion.div
-                    className="absolute top-4 left-4 sm:top-8 sm:left-8 w-6 h-6 sm:w-8 sm:h-8 border-l-[1px] border-t-[1px] border-[#EB5B00]/30 z-40"
+                    className="absolute top-4 left-4 sm:top-8 sm:left-8 w-6 h-6 sm:w-8 sm:h-8 border-l-[2px] border-t-[2px] border-[#EB5B00]/30 z-40"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: phase === "wipe" ? 0 : 1 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                 />
                 <motion.div
-                    className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-6 h-6 sm:w-8 sm:h-8 border-r-[1px] border-b-[1px] border-[#EB5B00]/30 z-40"
+                    className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-6 h-6 sm:w-8 sm:h-8 border-r-[2px] border-b-[2px] border-[#EB5B00]/30 z-40"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: phase === "wipe" ? 0 : 1 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
