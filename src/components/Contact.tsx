@@ -16,7 +16,7 @@ const socialLinks = [
   { title: "Github", url: "#" },
   { title: "LinkedIn", url: "#" },
   { title: "Dribbble", url: "#" },
-  { title: "Whatsapp", url: "#" },
+  { title: "Whatsapp", url: "https://wa.me/919251296134" },
 ]
 
 const Contact = () => {

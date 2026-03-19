@@ -18,7 +18,7 @@ const SocialLinks = [
   { title: "Github", url: "#" },
   { title: "LinkedIn", url: "#" },
   { title: "Dribbble", url: "#" },
-  { title: "Whatsapp", url: "#" },
+  { title: "Whatsapp", url: "https://wa.me/919251296134" },
 ]
 
 const perspective = {
@@ -90,8 +90,8 @@ const Navbar = ({ onNavigate }: { onNavigate?: () => void }) => {
                   href={link.url}
                   onClick={onNavigate}
                   className={`${Xirod.className} text-4xl font-extrabold uppercase px-10 transition-colors ${isActive
-                      ? 'text-[#EB5B00]'
-                      : 'text-black group-hover/link:text-[#EB5B00]'
+                    ? 'text-[#EB5B00]'
+                    : 'text-black group-hover/link:text-[#EB5B00]'
                     }`}
                 >
                   {link.title}

@@ -24,7 +24,7 @@ const Expertise = () => {
         initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-        className={`${xirod.className} text-5xl md:text-7xl lg:text-[9rem] leading-none text-center z-10`}
+        className={`${xirod.className} text-4xl md:text-7xl lg:text-[9rem] leading-none text-center z-10`}
       >
         <span className="text-white">EXPERT</span>
         <span className="text-[#EB5B00]">ISE</span>
