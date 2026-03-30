@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://manieshsanwal.in"),
   title: "Maniesh Sanwal | Portfolio - UI/UX Designer & Full-Stack Developer",
   description: "Maniesh Sanwal's professional portfolio showcasing UI/UX design, Web Development, and AI-powered SaaS solutions.",
   keywords: ["Maniesh Sanwal", "Portfolio", "UI/UX Designer", "Full-Stack Developer", "AI SaaS", "Web Design"],
