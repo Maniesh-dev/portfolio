@@ -3,9 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import localFont from 'next/font/local';
+import { xirod as Xirod } from '../lib/fonts';
 
-const Xirod = localFont({ src: "../fonts/Xirod.otf" });
+
 const NavLinks = [
   { title: "Index", url: "/" },
   { title: "Work", url: "/work" },

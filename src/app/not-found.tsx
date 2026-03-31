@@ -1,13 +1,13 @@
 "use client"
 
 import Link from 'next/link'
-import localFont from 'next/font/local'
+import { xirod } from '../lib/fonts'
 import { motion } from 'framer-motion'
 import Header from '@/components/Header'
 import Menubar from '@/components/Menubar'
 import GibberishText from '@/components/ui/GibberishText'
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+
 
 const NotFound = () => {
     return (

@@ -4,14 +4,11 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { HoverBorderGradient } from './ui/HoverBorderGradient';
-import localFont from 'next/font/local';
+import { xirod } from '../lib/fonts';
 import Image from 'next/image';
 import Logo from '../../public/logoWhite.png';
 
-const xirod = localFont({ 
-  src: "../fonts/Xirod.otf",
-  display: 'swap'
-});
+
 const Header = () => {
   const { scrollYProgress } = useScroll();
   const [isOpen, setIsOpen] = useState(false);

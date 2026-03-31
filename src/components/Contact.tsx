@@ -1,15 +1,12 @@
 "use client"
 
 import { useState } from 'react'
-import localFont from 'next/font/local'
+import { xirod } from '../lib/fonts'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import SwapText from '@/components/ui/SwapText'
 
-const xirod = localFont({
-  src: "../fonts/Xirod.otf",
-  display: 'swap',
-});
+
 
 const socialLinks = [
   { title: "Instagram", url: "#" },

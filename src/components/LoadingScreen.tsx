@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import localFont from "next/font/local"
+import { xirod } from "../lib/fonts"
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" })
+
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
     const [progress, setProgress] = useState(0)

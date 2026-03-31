@@ -3,15 +3,12 @@
 import Header from '@/components/Header'
 import Menubar from '@/components/Menubar'
 import Contact from '@/components/Contact'
-import localFont from 'next/font/local'
+import { xirod } from '../../lib/fonts'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 
-const xirod = localFont({
-    src: "../../fonts/Xirod.otf",
-    display: 'swap',
-});
+
 
 /* ───────────── project data per skillset ───────────── */
 

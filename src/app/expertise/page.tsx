@@ -3,12 +3,12 @@
 import Header from '@/components/Header'
 import Menubar from '@/components/Menubar'
 import Contact from '@/components/Contact'
-import localFont from 'next/font/local'
+import { xirod } from '../../lib/fonts'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import forkIcon from '../../../public/forkicon.png'
 
-const xirod = localFont({ src: "../../fonts/Xirod.otf" });
+
 
 const services = [
     {

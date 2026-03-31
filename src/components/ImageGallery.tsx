@@ -18,7 +18,7 @@ import Image, { StaticImageData } from 'next/image'
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { useDimension } from '@/lib/useDimension'
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
 
 const images = [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12]
 

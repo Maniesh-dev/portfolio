@@ -1,6 +1,6 @@
 "use client"
 
-import localFont from 'next/font/local';
+import { xirod as Xirod } from '../lib/fonts';
 import TopWork from '../../public/work.png'
 import BottomWork from '../../public/BottomWork.png'
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 
-const Xirod = localFont({ src: "../fonts/Xirod.otf" });
+
 const WorkIntro = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

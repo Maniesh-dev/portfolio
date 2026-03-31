@@ -1,13 +1,13 @@
 "use client"
 
 import React, { useEffect } from 'react'
-import localFont from "next/font/local";
+import { xirod } from "../lib/fonts";
 import GibberishText from './ui/GibberishText'
 import ContactBtn from './ui/ContactBtn';
 import InfiniteScroll from './ui/InfiniteScroll';
 
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+
 const Hero = () => {
   const months = [
     "January",

@@ -1,9 +1,9 @@
 'use client'
 
-import localFont from "next/font/local";
+import { xirod } from "../lib/fonts";
 import { motion } from "framer-motion";
 
-const xirod = localFont({ src: "../fonts/Xirod.otf" });
+
 
 const skills = [
   {
