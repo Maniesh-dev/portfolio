@@ -15,6 +15,7 @@ const skills = [
       "Visual design systems",
       "Usability testing",
     ],
+    techStack: ["Figma", "Adobe XD", "Framer", "Maze", "FigJam", "Sketch"],
   },
   {
     title: "Web Design",
@@ -25,6 +26,7 @@ const skills = [
       "Brand-aligned aesthetics",
       "Motion & micro-interactions",
     ],
+    techStack: ["CSS3", "Tailwind CSS", "Sass", "Three.js", "Framer Motion", "GSAP", "Spline"],
   },
   {
     title: "Web Development",
@@ -35,6 +37,7 @@ const skills = [
       "Clean & scalable code",
       "API integrations",
     ],
+    techStack: ["Next.js", "React", "TypeScript", "Express.js", "Node.js", "Prisma", "PostgreSQL", "Mongodb"],
   },
   {
     title: "AI SaaS App",
@@ -45,6 +48,7 @@ const skills = [
       "Dashboard & analytics UI",
       "Scalable cloud architecture",
     ],
+    techStack: ["Stripe", "Razorpay", "Firebase", "Supabase", "Vercel", "OpenAI API", "Gamini API", "Redis"],
   },
   {
     title: "AI Agents",
@@ -55,6 +59,7 @@ const skills = [
       "Autonomous task automation",
       "Custom agent pipelines",
     ],
+    techStack: ["LangChain", "OpenAI", "Python", "Pinecone", "CrewAI"],
   },
   {
     title: "AI Automation",
@@ -65,6 +70,7 @@ const skills = [
       "Third-party API orchestration",
       "Intelligent scheduling & triggers",
     ],
+    techStack: ["n8n", "Zapier", "Make", "Python", "Cron Jobs"],
   },
 ];
 
@@ -146,6 +152,17 @@ const About = () => {
                       </li>
                     ))}
                   </ul>
+                  {/* Tech Stack Badges */}
+                  <div className="flex flex-wrap gap-2 mt-5 pt-4 border-t border-white/5">
+                    {skill.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 text-[10px] tracking-wider uppercase font-mono rounded-full border border-[#EB5B00]/20 text-[#EB5B00]/70 bg-[#EB5B00]/5 group-hover:border-[#EB5B00]/50 group-hover:text-[#EB5B00] group-hover:bg-[#EB5B00]/10 group-hover:shadow-[0_0_8px_rgba(235,91,0,0.15)] transition-all duration-500"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 {/* Decorative square element from reference */}
                 <div className="absolute right-8 top-8 w-4 h-4 border border-white/20 group-hover:border-[#EB5B00] group-hover:rotate-45 transition-all duration-500" />
