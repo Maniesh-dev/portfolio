@@ -286,6 +286,7 @@ const Contact = () => {
               viewport={{ once: true }}
               aria-label={`Follow on ${link.title}`}
               className="group flex items-center gap-2 cursor-pointer"
+              target="_blank"
             >
               <SwapText
                 finalText={`{ ${link.title} }`}

@@ -15,9 +15,9 @@ const NavLinks = [
 ]
 
 const SocialLinks = [
-  { title: "Github", url: "#" },
-  { title: "LinkedIn", url: "#" },
-  { title: "Dribbble", url: "#" },
+  { title: "Github", url: "https://github.com/Maniesh-dev" },
+  { title: "LinkedIn", url: "https://linkedin.com/in/maniesh-sanwal" },
+  { title: "Dribbble", url: "https://dribbble.com/Maniesh-dev" },
   { title: "Whatsapp", url: "https://wa.me/919251296134" },
 ]
 
