@@ -9,10 +9,10 @@ import SwapText from '@/components/ui/SwapText'
 
 
 const socialLinks = [
-  { title: "Instagram", url: "#" },
-  { title: "Github", url: "#" },
-  { title: "LinkedIn", url: "#" },
-  { title: "Dribbble", url: "#" },
+  { title: "Instagram", url: "https://www.instagram.com/maniesh_dev" },
+  { title: "Github", url: "https://github.com/Maniesh-dev" },
+  { title: "LinkedIn", url: "https://www.linkedin.com/in/maniesh-sanwal"},
+  { title: "Dribbble", url: "https://dribbble.com/maniesh_dev" },
   { title: "Whatsapp", url: "https://wa.me/919251296134" },
 ]
 
